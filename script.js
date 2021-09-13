@@ -1,8 +1,9 @@
-var x;
+var x, v;
 function setup() {
 	createCanvas(500, 400);
 
   x = 30;
+  v = 10;
 }
 
 
@@ -11,11 +12,12 @@ function draw() {
 
   circle(x, 130, 20);
   
-  x = x + 5;
+  x = x + v;
   
-  if(x > 300){
-    x = 0;
+  if(x < 0 || x > 300){
+   v = v * -1;
   }
 
 }
-	
+
+
